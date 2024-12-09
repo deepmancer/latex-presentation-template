@@ -1,0 +1,34 @@
+% -------------------------------
+% Slide Header
+% -------------------------------
+\setbeamertemplate{frametitle}{
+    \rlap{%
+        \begin{beamercolorbox}[sep=\titlevmargin, left, wd=\dimexpr\fullpagewidth - \titlehmargin * 2 + \titlevmargin * 2\relax]{frametitle}
+            \begin{minipage}{\dimexpr\fullpagewidth - \titlehmargin * 3 - 0.1cm\relax}
+                \strut\insertframetitle\strut\par
+            \end{minipage}
+        \end{beamercolorbox}
+    }
+    \vspace{\dimexpr-\baselineskip + 1ex\relax}
+    \noindent\rlap{\hspace{-\textmargin}\hspace{\titlehmargin}\rule{\dimexpr\fullpagewidth - \titlehmargin * 2\relax}{0.4pt}}
+    \vspace{-0.6ex}
+}
+
+% -------------------------------
+% Slide Footer
+% -------------------------------
+\setbeamertemplate{footline}{
+    \noindent\hspace{\titlehmargin}\rule{\dimexpr\fullpagewidth - \titlehmargin * 2\relax}{0.4pt}\par
+    \vspace{\titlevmargin}
+    \leavevmode
+    \noindent\hspace{\dimexpr\titlehmargin - \titlevmargin\relax}
+    \begin{beamercolorbox}[sep=\titlevmargin, wd=\dimexpr\fullpagewidth - \titlehmargin * 2 + \titlevmargin * 2\relax]{footline}
+        \hfill
+        {\usebeamercolor[fg]{title in head/foot}\usebeamerfont{title in head/foot}\insertshorttitle}
+        \hfill
+        {\usebeamercolor[fg]{date in head/foot}\usebeamerfont{date in head/foot}\insertshortdate{}}
+        \hfill
+        {\usebeamercolor[fg]{page number in head/foot}\usebeamerfont{page number in head/foot}\usebeamertemplate{page number in head/foot}}
+    \end{beamercolorbox}
+    \vspace{\titlevmargin}
+}
