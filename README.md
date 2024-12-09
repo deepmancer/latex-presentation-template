@@ -3,8 +3,8 @@
 <div align="center">
 <img src="https://img.shields.io/badge/LaTeX-008080.svg?style=for-the-badge&logo=LaTeX&logoColor=white" alt="LaTeX">
 <img src="https://img.shields.io/badge/Make-6D00CC.svg?style=for-the-badge&logo=Make&logoColor=white" alt="Makefile">
-<img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=for-the-badge" alt="License">
-<img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge" alt="Contributions Welcome">
+<img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
+<img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome">
 </div>
 
 
