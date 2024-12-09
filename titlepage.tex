@@ -1,0 +1,19 @@
+% -------------------------------
+% Title Page Template
+% -------------------------------
+\setbeamertemplate{title page}{
+    \begin{picture}(0,0)
+        \put(-\textmargin, \dimexpr -\paperheight*6/10 \relax){%
+            \includegraphics[width=\paperwidth]{assets/presentation-theme/title-slide-background-wide.png}}
+        \put(-\textmargin + 7mm, -55pt){%
+            \begin{minipage}[b][4.5cm][t]{0.7\textwidth}
+                \raggedright
+                \color{white}
+                \usebeamerfont{title}{\inserttitle\\[0.9cm]}
+                \usebeamerfont{subtitle}{\sc\insertauthor\\[0.1cm]}
+                \usebeamerfont{institute}{\it\insertinstitute\\[0.3cm]}
+                \usebeamerfont{date}{\insertdate}
+            \end{minipage}
+        }
+    \end{picture}
+}
