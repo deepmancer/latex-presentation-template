@@ -16,7 +16,7 @@ Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a 
 
 | **Source Code** | **Website** |
 |:-----------------|:------------|
-| [github.com/deepmancer/latex-presentation-template](https://github.com/deepmancer/latex-presentation-template) | [deepmancer.github.io/latex-presentation-template](https://deepmancer.github.io/latex-presentation-template/) |
+| <a href="https://github.com/deepmancer/latex-presentation-template" target="_blank">github.com/deepmancer/latex-presentation-template</a> | <a href="https://deepmancer.github.io/latex-presentation-template/" target="_blank">deepmancer.github.io/latex-presentation-template</a> |
 
 ---
 
