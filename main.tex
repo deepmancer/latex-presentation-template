@@ -1,0 +1,76 @@
+\documentclass[aspectratio=169]{beamer}
+
+% Load modular components
+\input{config/preamble}
+\input{config/frame-settings}
+\input{titlepage}
+
+% Metadata
+\title[My Talk]{Title page title goes here and it can be quite long in which case it will wrap onto a 2nd and 3rd line}
+\author{Alireza Heidari}
+\institute{Simon Fraser University}
+\date[December 2024]{Really Great Conference, December 2024}
+
+% Document
+\begin{document}
+
+% Title Page
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% Main Content
+% -------------------------------
+% Slide Content
+% -------------------------------
+\begin{frame}
+  \frametitle{This is the first slide}
+  \framesubtitle{A bit more information about this}
+  
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  
+  Here is:
+  \begin{enumerate}
+      \item Some text;
+      \item Inline maths: $\mathcal{R}_C(D)=\oplus_{n\geqslant0}\mathcal{L}(nD)$;
+      \item Display maths:
+      \[
+          \operatorname{Tor}_i(\operatorname{colim}_\alpha M_\alpha, N) = \operatorname{colim}_\alpha\operatorname{Tor}_i(M_\alpha, N)
+      \]
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Make Titles Informative}
+  \begin{itemize}
+      \item Use \texttt{itemize} a lot.
+      \item Use very short sentences or short phrases.
+  \end{itemize}
+  You can create overlays:
+  \begin{itemize}
+      \item Using the \texttt{pause} command:
+      \begin{itemize}
+          \item First item.
+          \pause
+          \item Second item.
+      \end{itemize}
+      \item Using overlay specifications:
+      \begin{itemize}
+          \item<3-> First item.
+          \item<4-> Second item.
+      \end{itemize}
+      \item Using the general \texttt{uncover} command:
+      \begin{itemize}
+          \uncover<5->{\item First item.}
+          \uncover<6->{\item Second item.}
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+% References
+\begin{frame}{References}
+    \bibliographystyle{plainnat}
+    \bibliography{references}
+\end{frame}
+
+\end{document}
