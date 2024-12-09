@@ -11,6 +11,13 @@
 Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, customizable, and user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is designed to simplify and enhance your presentation creation process.
 
 > Create beautiful, mathematically-rich presentations with ease using LaTeX!
+
+---
+
+| **Source Code** | **Website** |
+|:-----------------|:------------|
+| [github.com/deepmancer/latex-presentation-template](https://github.com/deepmancer/latex-presentation-template) | [deepmancer.github.io/latex-presentation-template](https://deepmancer.github.io/latex-presentation-template/) |
+
 ---
 
 ## ✨ Why Use This Template?
