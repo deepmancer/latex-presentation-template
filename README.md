@@ -39,18 +39,6 @@ Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a 
 
 ---
 
-## 🌟 Key Features
-
-| Feature                  | Description                                                                 |
-|--------------------------|-----------------------------------------------------------------------------|
-| **Modern Design**        | Sleek, minimalist visuals for professional presentations.                  |
-| **Easy Customization**   | Modify themes, layouts, and metadata effortlessly.                        |
-| **Pre-Built Makefile**   | Simplifies compiling, cleaning, and file management.                      |
-| **Math Support**         | Embed equations and symbols with LaTeX's powerful math tools.             |
-| **Bibliography Integration** | Manage references with BibTeX for a polished, academic presentation.    |
-
----
-
 ## 🚀 Getting Started
 
 Follow these simple steps to set up the template and start creating your presentation.
