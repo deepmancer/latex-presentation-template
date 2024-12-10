@@ -7,10 +7,10 @@
 <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome">
 </div>
 
+<p align="center"><em>Create beautiful, mathematically-rich presentations with ease using LaTeX!</em></p>
+
 
 Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, customizable, and user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is designed to simplify and enhance your presentation creation process.
-
-> Create beautiful, mathematically-rich presentations with ease using LaTeX!
 
 ---
 
