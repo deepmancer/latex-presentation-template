@@ -20,6 +20,15 @@ Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a 
 
 ---
 
+## 🖼️ Snapshots
+| **Section**       | **Slide**                                                                 |
+|:------------------:|:-------------------------------------------------------------------------:|
+| **Title Page**     | ![Title Page](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/sample/titlepage.png)                                |
+| **Middle Slides**  | ![Content Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/sample/content.png)                               |
+| **References**| ![References Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/sample/references.png)                        |
+
+---
+
 ## ✨ Why Use This Template?
 
 - **🎨 Modern and Elegant Design**: Impress your audience with a clean, minimalist look.
