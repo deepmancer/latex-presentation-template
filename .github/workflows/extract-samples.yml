@@ -21,7 +21,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install PyPDF2 pillow
+        pip install PyPDF2 pillow pdf2image
 
     - name: Check for main.pdf
       run: |
@@ -33,31 +33,48 @@ jobs:
     - name: Extract Pages from PDF and Save as PNG
       run: |
         python - <<EOF
-        from PyPDF2 import PdfReader
-        from PIL import Image, ImageDraw
         import os
+        from PyPDF2 import PdfReader
+        from PIL import Image
+        from pdf2image import convert_from_path
 
-        def extract_page_as_image(pdf_path, page_num, output_path):
-            try:
-                reader = PdfReader(pdf_path)
-                if page_num == -1:  # Last page
-                    page_num = len(reader.pages) - 1
-                page = reader.pages[page_num]
-                text = page.extract_text()
+        def extract_page_as_image():
+            pdf_path = "main.pdf"
+            output_folder = "assets/sample"
+            # Verify if the file exists
+            if not os.path.isfile(pdf_path):
+                raise FileNotFoundError(f"The file {pdf_path} does not exist.")
 
-                # Render a blank image with text overlay for simplicity
-                img = Image.new('RGB', (800, 600), color='white')
-                draw = ImageDraw.Draw(img)
-                draw.text((50, 50), text[:500], fill='black')
-                img.save(output_path)
-                print(f"Saved: {output_path}")
-            except Exception as e:
-                print(f"Error processing page {page_num}: {e}")
+            # Create the output folder if it does not exist
+            if not os.path.isdir(output_folder):
+                os.makedirs(output_folder, exist_ok=True)
 
-        os.makedirs("assets/samples", exist_ok=True)
-        extract_page_as_image("main.pdf", 0, "assets/samples/titlepage.png")
-        extract_page_as_image("main.pdf", -1, "assets/samples/references.png")
-        extract_page_as_image("main.pdf", 1, "assets/samples/content.png")
+            # Read the PDF to determine the number of pages
+            reader = PdfReader(pdf_path)
+            num_pages = len(reader.pages)
+
+            if num_pages == 0:
+                raise ValueError("The PDF has no pages.")
+
+            # Convert the first page
+            titlepage_images = convert_from_path(pdf_path, first_page=1, last_page=1)
+            titlepage_image = titlepage_images[0]
+            titlepage_image_path = os.path.join(output_folder, "titlepage.png")
+            titlepage_image.save(titlepage_image_path, "PNG")
+
+            # Convert the last page
+            references_images = convert_from_path(pdf_path, first_page=num_pages, last_page=num_pages)
+            references_image = references_images[0]
+            references_image_path = os.path.join(output_folder, "references.png")
+            references_image.save(references_image_path, "PNG")
+
+            # Convert the second page
+            content_images = convert_from_path(pdf_path, first_page=2, last_page=2)
+            content_image = content_images[0]
+            content_image_path = os.path.join(output_folder, "content.png")
+            content_image.save(content_image_path, "PNG")
+
+        extract_page_as_image()
         EOF
 
     - name: Commit and Push PNG Files
