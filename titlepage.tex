@@ -5,14 +5,15 @@
     \begin{picture}(0,0)
         \put(-\textmargin, \dimexpr -\paperheight*6/10 \relax){%
             \includegraphics[width=\paperwidth]{assets/presentation-theme/title-slide-background-wide.png}}
-        \put(-\textmargin + 7mm, -55pt){%
-            \begin{minipage}[b][4.5cm][t]{0.7\textwidth}
+        \put(-\textmargin + 7mm, -75pt){%
+            \begin{minipage}[b][4.5cm][t]{0.8\textwidth}
                 \raggedright
                 \color{white}
-                \usebeamerfont{title}{\inserttitle\\[0.9cm]}
-                \usebeamerfont{subtitle}{\sc\insertauthor\\[0.1cm]}
-                \usebeamerfont{institute}{\it\insertinstitute\\[0.3cm]}
-                \usebeamerfont{date}{\insertdate}
+                \usebeamerfont{title}{\paperTitle}\\[0.4cm]
+                \usebeamerfont{subtitle}{\paperAuthors}\\[0.2cm]
+                \usebeamerfont{institute}{\paperConference, \paperPublishedYear}\\[3cm]
+                \usebeamerfont{subtitle}{\sc\presentor}\\[0.2cm]
+                \usebeamerfont{date}\small{\presentationDate}
             \end{minipage}
         }
     \end{picture}
