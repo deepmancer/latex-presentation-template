@@ -1,0 +1,69 @@
+name: Process PDF on Push
+
+on:
+  push:
+    paths:
+      - main.pdf
+
+jobs:
+  extract-pdf-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install PyPDF2 pillow
+
+    - name: Check for main.pdf
+      run: |
+        if [ ! -f "main.pdf" ]; then
+          echo "Error: main.pdf not found."
+          exit 1
+        fi
+
+    - name: Extract Pages from PDF and Save as PNG
+      run: |
+        python - <<EOF
+        from PyPDF2 import PdfReader
+        from PIL import Image, ImageDraw
+        import os
+
+        def extract_page_as_image(pdf_path, page_num, output_path):
+            try:
+                reader = PdfReader(pdf_path)
+                if page_num == -1:  # Last page
+                    page_num = len(reader.pages) - 1
+                page = reader.pages[page_num]
+                text = page.extract_text()
+
+                # Render a blank image with text overlay for simplicity
+                img = Image.new('RGB', (800, 600), color='white')
+                draw = ImageDraw.Draw(img)
+                draw.text((50, 50), text[:500], fill='black')
+                img.save(output_path)
+                print(f"Saved: {output_path}")
+            except Exception as e:
+                print(f"Error processing page {page_num}: {e}")
+
+        os.makedirs("assets/samples", exist_ok=True)
+        extract_page_as_image("main.pdf", 0, "assets/samples/titlepage.png")
+        extract_page_as_image("main.pdf", -1, "assets/samples/references.png")
+        extract_page_as_image("main.pdf", 1, "assets/samples/content.png")
+        EOF
+
+    - name: Commit and Push PNG Files
+      run: |
+        git config --local user.name "GitHub Actions"
+        git config --local user.email "actions@github.com"
+        git add assets/samples/*.png
+        git commit -m "Add extracted PNG files from main.pdf" || echo "No changes to commit"
+        git push
