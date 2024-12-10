@@ -24,11 +24,13 @@
     \noindent\hspace{\dimexpr\titlehmargin - \titlevmargin\relax}
     \begin{beamercolorbox}[sep=\titlevmargin, wd=\dimexpr\fullpagewidth - \titlehmargin * 2 + \titlevmargin * 2\relax]{footline}
         \hfill
-        {\usebeamercolor[fg]{title in head/foot}\usebeamerfont{title in head/foot}\insertshorttitle}
+        {\usebeamercolor[fg]{presentor in head/foot}\usebeamerfont{presentor in head/foot}\presentor}
         \hfill
-        {\usebeamercolor[fg]{date in head/foot}\usebeamerfont{date in head/foot}\insertshortdate{}}
+        {\usebeamercolor[fg]{date in head/foot}\usebeamerfont{date in head/foot}\presentationDate}
         \hfill
         {\usebeamercolor[fg]{page number in head/foot}\usebeamerfont{page number in head/foot}\usebeamertemplate{page number in head/foot}}
     \end{beamercolorbox}
     \vspace{\titlevmargin}
 }
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
