@@ -40,7 +40,7 @@ jobs:
 
         def extract_page_as_image():
             pdf_path = "main.pdf"
-            output_folder = "assets/sample"
+            output_folder = "assets/samples"
             # Verify if the file exists
             if not os.path.isfile(pdf_path):
                 raise FileNotFoundError(f"The file {pdf_path} does not exist.")
