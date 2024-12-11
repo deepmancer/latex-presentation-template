@@ -1,6 +1,7 @@
 # 🚀 LaTeX Presentation Template
 
 <div align="center">
+<<<<<<< HEAD
 <img src="https://img.shields.io/badge/LaTeX-008080.svg?style=for-the-badge&logo=LaTeX&logoColor=white" alt="LaTeX">
 <img src="https://img.shields.io/badge/Make-6D00CC.svg?style=for-the-badge&logo=Make&logoColor=white" alt="Makefile">
 <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white" alt="GitHub Actions">
@@ -12,57 +13,83 @@
 
 
 Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, customizable, and user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is designed to simplify and enhance your presentation creation process.
+=======
+  <img src="https://img.shields.io/badge/LaTeX-008080.svg?style=for-the-badge&logo=LaTeX&logoColor=white" alt="LaTeX">
+  <img src="https://img.shields.io/badge/Make-6D00CC.svg?style=for-the-badge&logo=Make&logoColor=white" alt="Makefile">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge" alt="Contributions Welcome">
+</div>
+
+Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is tailored to help you create visually appealing and technically rich presentations effortlessly.
+
+> "Create captivating, mathematically-rich presentations with ease using LaTeX!"
+>>>>>>> d018b01 (Enhance PDF processing by adding support for additional file formats)
 
 ---
 
-| **Source Code** | **Website** |
-|:-----------------|:------------|
-| <a href="https://github.com/deepmancer/latex-presentation-template" target="_blank">github.com/deepmancer/latex-presentation-template</a> | <a href="https://deepmancer.github.io/latex-presentation-template/" target="_blank">deepmancer.github.io/latex-presentation-template</a> |
+## 📌 Quick Links
+
+| [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Webpage](https://deepmancer.github.io/latex-presentation-template/) |
+|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 
 ---
 
 ## 🖼️ Snapshots
-| **Section**       | **Slide**                                                                 |
-|:------------------:|:-------------------------------------------------------------------------:|
-| **Title Page**     | ![Title Page](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/titlepage.png)                                |
-| **Middle Slides**  | ![Content Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/content.png)                               |
-| **References**| ![References Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/references.png)                        |
+
+Preview some slides created with this template:
+
+| **Slide Section**   | **Preview**                                                              |
+|---------------------|--------------------------------------------------------------------------|
+| **Title Page**      | ![Title Page](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/titlepage.png) |
+| **Content Slide**   | ![Content Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/content.png) |
+| **References Slide**| ![References Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/references.png) |
 
 ---
 
-## ✨ Why Use This Template?
+## ✨ Why Choose This Template?
 
-- **🎨 Modern and Elegant Design**: Impress your audience with a clean, minimalist look.
-- **⚡ Time-Saving**: Pre-configured settings and ready-to-use slides to get you started quickly.
-- **🔢 Math and Symbols Support**: Easily include mathematical equations and scientific notations.
-- **📚 Seamless Bibliography Management**: Integrate references with BibTeX effortlessly.
-- **🛠️ Fully Customizable**: Adjust colors, fonts, layouts, and more to suit your style.
+- **🎨 Sleek and Modern Design**: Impress your audience with clean, professional visuals.
+- **⚡ Time-Saving Setup**: Pre-configured settings and ready-to-use slides.
+- **🔢 Math-Ready**: Seamless support for equations, symbols, and scientific notations.
+- **📚 Integrated Bibliography**: Easily manage references with BibTeX.
+- **🛠️ Fully Customizable**: Tailor colors, fonts, layouts, and more to match your style.
 
 ---
 
+<<<<<<< HEAD
+=======
+## 🌟 Key Features
+
+| **Feature**             | **Description**                                                        |
+|-------------------------|------------------------------------------------------------------------|
+| **Elegant Design**      | Minimalist visuals for professional, academic, or corporate use.       |
+| **Easy Customization**  | Modify metadata, colors, and slide layouts with ease.                  |
+| **Makefile Automation** | Simplify compilation, cleanup, and management of auxiliary files.      |
+| **Mathematics Support** | LaTeX’s powerful math tools for equations and notations.             |
+| **Bibliography Support**| Effortlessly integrate and cite references with BibTeX.               |
+
+---
+
+>>>>>>> d018b01 (Enhance PDF processing by adding support for additional file formats)
 ## 🚀 Getting Started
-
-Follow these simple steps to set up the template and start creating your presentation.
 
 ### ✅ Prerequisites
 
-Ensure the following are installed on your system:
+Ensure you have the following installed on your system:
 
-- [LaTeX distribution](https://www.latex-project.org/get/) (e.g., TeX Live)
+- A [LaTeX distribution](https://www.latex-project.org/get/) (e.g., TeX Live, MiKTeX, MacTeX)
 - [BibTeX](http://www.bibtex.org/)
 - A text editor or IDE (e.g., [Visual Studio Code](https://code.visualstudio.com/))
 
 ### 📥 Installation
 
-Clone the repository:
+Clone the repository and navigate to the project directory:
 
 ```bash
+# Clone the repository
 git clone https://github.com/deepmancer/latex-presentation-template.git
-```
 
-Navigate to the project directory:
-
-```bash
+# Navigate to the directory
 cd latex-presentation-template
 ```
 
@@ -70,19 +97,20 @@ cd latex-presentation-template
 
 ## 📖 Usage
 
-### 🖨️ Compiling the Presentation
+### 🖨️ Compiling Your Presentation
 
-Use the provided [`Makefile`](Makefile) to compile your presentation:
+Use the included [`Makefile`](Makefile) for compiling your presentation:
 
 ```bash
+# Compile the presentation
 make
 ```
 
-The compiled presentation will be saved as [`main.pdf`](main.pdf).
+The compiled PDF will be saved as `main.pdf`.
 
-### 🧹 Cleaning Up
+### 🧹 Cleanup
 
-Remove auxiliary files generated during compilation:
+Clean up auxiliary files:
 
 ```bash
 make clean
@@ -98,45 +126,43 @@ make cleanall
 
 ## 🎨 Customization
 
-Tailor the template to your needs with these simple steps:
+### 🔄 Update Metadata
 
-### 🔄 Updating Metadata
-
-Edit [`main.tex`](main.tex) to modify the title, author, institute, and date:
+Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 
 ```latex
-\title[Short Title]{Full Title of the Presentation}
+\title[Short Title]{Full Presentation Title}
 \author{Your Name}
 \institute{Your Institution}
 \date[Month Year]{Event or Conference, Month Year}
 ```
 
-### 🎨 Modifying Theme Settings
+### 🎨 Modify Theme Settings
 
-Adjust colors, fonts, and layouts in:
+Adjust colors, fonts, and layouts in the configuration files:
 
 - [`config/preamble.tex`](./config/preamble.tex)
 - [`config/frame-settings.tex`](./config/frame-settings.tex)
 
-### 📄 Adding Slides
+### 📄 Add Slides
 
-Insert new slides in the `Main Content` section of [`main.tex`](./main.tex):
+To add new slides, edit the `Main Content` section of [`main.tex`](./main.tex):
 
 ```latex
 \begin{frame}{Slide Title}
-    % Your content here
+    % Your slide content here
 \end{frame}
 ```
 
-Alternatively, create new slides in the [`slides/`](./slides/) directory and include them in [`main.tex`](./main.tex):
+Alternatively, create new slides in the `slides/` directory and include them in `main.tex`:
 
 ```latex
 \input{slides/your-slide.tex}
 ```
 
-### 🖼️ Including Figures and Images
+### 🖼️ Add Figures
 
-Place images in the [`assets/figures`](./assets/figures) directory and reference them in your slides:
+Place your images in the [`assets/figures`](./assets/figures) directory and reference them in your slides:
 
 ```latex
 \begin{figure}
@@ -145,9 +171,9 @@ Place images in the [`assets/figures`](./assets/figures) directory and reference
 \end{figure}
 ```
 
-### 📚 Managing References
+### 📚 Manage References
 
-Add references in [`references.bib`](references.bib) and cite them using:
+Add references to [`references.bib`](references.bib) and cite them in your slides using:
 
 ```latex
 \cite{your-reference}
@@ -157,46 +183,33 @@ Add references in [`references.bib`](references.bib) and cite them using:
 
 ## 📁 Project Structure
 
-| File/Directory       | Purpose                                                   |
-|----------------------|-----------------------------------------------------------|
-| [`main.tex`](./main.tex)           | Main LaTeX file for the presentation.                     |
-| [`Makefile`](./Makefile)           | Automates compilation and cleanup tasks.                  |
-| [`config/`](./config)            | Contains configuration files for theme and settings.      |
-| [`assets/`](./assets)            | Directory for figures and presentation assets.            |
-| [`slides/`](./slides)            | Additional slides or content sections.                    |
-| [`references.bib`](./references.bib)     | Bibliography entries.                                     |
-| [`titlepage.tex`](./titlepage.tex)      | Custom title page layout.                                 |
-| [`LICENSE`](./LICENSE)            | License information for this project.                     |
-
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Whether it's reporting a bug, suggesting a feature, or submitting a pull request, your help is appreciated.
-
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature-name`.
-5. Submit a pull request!
+| **File/Directory**         | **Purpose**                                                        |
+|----------------------------|--------------------------------------------------------------------|
+| `main.tex`                 | Main LaTeX file for the presentation.                             |
+| `Makefile`                 | Automates build and cleanup tasks.                               |
+| `config/`                  | Configuration files for themes and settings.                     |
+| `assets/`                  | Directory for figures and other assets.                          |
+| `slides/`                  | Additional slides or sections.                                   |
+| `references.bib`           | Bibliography entries.                                            |
+| `titlepage.tex`            | Custom title page layout.                                        |
+| `LICENSE`                  | Project license information.                                     |
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the license terms.
+This project is licensed under the [MIT License](LICENSE). You’re free to use, modify, and distribute the template as per the license terms.
 
 ---
 
-## ⭐ Show Your Support
+## ⭐ Support the Project
 
-If you find this template helpful, please consider:
+If you find this template useful, consider:
 
-- Giving this repository a ⭐ on GitHub!
-- Sharing it with your colleagues and peers.
-- Forking the repository to customize and enhance it further.
+- Starring this repository on GitHub ⭐
+- Forking the project to make your own version 🍴
+- Sharing it with your peers and colleagues 📢
 
 ---
 
-Happy TeXing! 🤖
+Happy TeXing! 🎉
