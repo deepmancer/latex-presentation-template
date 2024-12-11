@@ -9,8 +9,6 @@
 
 <p align="center"><em>Create beautiful, mathematically-rich presentations with ease using LaTeX!</em></p>
 
-
-
 Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is tailored to help you create visually appealing and technically rich presentations effortlessly.
 
 ---
@@ -18,7 +16,6 @@ Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a 
 ## 📌 Quick Links
 
 | [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Live Preview](https://deepmancer.github.io/latex-presentation-template/) |
-|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 
 ---
 
