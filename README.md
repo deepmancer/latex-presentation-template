@@ -1,19 +1,6 @@
 # 🚀 LaTeX Presentation Template
 
 <div align="center">
-<<<<<<< HEAD
-<img src="https://img.shields.io/badge/LaTeX-008080.svg?style=for-the-badge&logo=LaTeX&logoColor=white" alt="LaTeX">
-<img src="https://img.shields.io/badge/Make-6D00CC.svg?style=for-the-badge&logo=Make&logoColor=white" alt="Makefile">
-<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white" alt="GitHub Actions">
-<img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
-<img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome">
-</div>
-
-<p align="center"><em>Create beautiful, mathematically-rich presentations with ease using LaTeX!</em></p>
-
-
-Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, customizable, and user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is designed to simplify and enhance your presentation creation process.
-=======
   <img src="https://img.shields.io/badge/LaTeX-008080.svg?style=for-the-badge&logo=LaTeX&logoColor=white" alt="LaTeX">
   <img src="https://img.shields.io/badge/Make-6D00CC.svg?style=for-the-badge&logo=Make&logoColor=white" alt="Makefile">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
@@ -23,13 +10,12 @@ Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a 
 Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is tailored to help you create visually appealing and technically rich presentations effortlessly.
 
 > "Create captivating, mathematically-rich presentations with ease using LaTeX!"
->>>>>>> d018b01 (Enhance PDF processing by adding support for additional file formats)
 
 ---
 
 ## 📌 Quick Links
 
-| [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Webpage](https://deepmancer.github.io/latex-presentation-template/) |
+| [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Live Preview](https://deepmancer.github.io/latex-presentation-template/) |
 |:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 
 ---
@@ -56,8 +42,6 @@ Preview some slides created with this template:
 
 ---
 
-<<<<<<< HEAD
-=======
 ## 🌟 Key Features
 
 | **Feature**             | **Description**                                                        |
@@ -70,7 +54,6 @@ Preview some slides created with this template:
 
 ---
 
->>>>>>> d018b01 (Enhance PDF processing by adding support for additional file formats)
 ## 🚀 Getting Started
 
 ### ✅ Prerequisites
