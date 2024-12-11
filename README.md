@@ -3,13 +3,15 @@
 <div align="center">
   <img src="https://img.shields.io/badge/LaTeX-008080.svg?style=for-the-badge&logo=LaTeX&logoColor=white" alt="LaTeX">
   <img src="https://img.shields.io/badge/Make-6D00CC.svg?style=for-the-badge&logo=Make&logoColor=white" alt="Makefile">
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge" alt="Contributions Welcome">
 </div>
 
-Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is tailored to help you create visually appealing and technically rich presentations effortlessly.
+<p align="center"><em>Create beautiful, mathematically-rich presentations with ease using LaTeX!</em></p>
 
-> "Create captivating, mathematically-rich presentations with ease using LaTeX!"
+
+
+Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is tailored to help you create visually appealing and technically rich presentations effortlessly.
 
 ---
 
@@ -44,13 +46,13 @@ Preview some slides created with this template:
 
 ## 🌟 Key Features
 
-| **Feature**             | **Description**                                                        |
-|-------------------------|------------------------------------------------------------------------|
-| **Elegant Design**      | Minimalist visuals for professional, academic, or corporate use.       |
-| **Easy Customization**  | Modify metadata, colors, and slide layouts with ease.                  |
-| **Makefile Automation** | Simplify compilation, cleanup, and management of auxiliary files.      |
-| **Mathematics Support** | LaTeX’s powerful math tools for equations and notations.             |
-| **Bibliography Support**| Effortlessly integrate and cite references with BibTeX.               |
+| **Feature**                  | **Description**                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| *Modern Design*        | Sleek, minimalist visuals for professional presentations.                  |
+| *Easy Customization*   | Modify themes, layouts, and metadata effortlessly.                        |
+| *Pre-Built Makefile*   | Simplifies compiling, cleaning, and file management.                      |
+| *Math Support*         | Embed equations and symbols with LaTeX's powerful math tools.             |
+| *Bibliography Integration* | Manage references with BibTeX for a polished, academic presentation.    |
 
 ---
 
