@@ -15,7 +15,7 @@ Welcome to the **LaTeX Presentation Template**! This repository provides a moder
 
 ## 📌 Quick Links
 
-| [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Live Preview](https://deepmancer.github.io/latex-presentation-template/) | [Overleaf](https://www.overleaf.com/7371632237xhksjncgphnf#32b38d) |
+| [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Live Preview](https://deepmancer.github.io/latex-presentation-template/) | 
 
 ---
 
