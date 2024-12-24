@@ -23,11 +23,13 @@ Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a 
 
 Preview some slides created with this template:
 
-| **Slide Section**   | **Preview**                                                              |
-|---------------------|--------------------------------------------------------------------------|
-| **Title Page**      | ![Title Page](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/titlepage.png) |
-| **Content Slide**   | ![Content Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/content.png) |
-| **References Slide**| ![References Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/references.png) |
+| **Slide Section**       | **Preview**                                                              |
+|-------------------------|--------------------------------------------------------------------------|
+| **Title Page**          | ![Title Page](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/titlepage.png) |
+| **Table of Contents**   | ![Table of Contents](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/table_of_contents.png) |
+| **Image Displayed**         | ![Image Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/image_slide.png) |
+| **Equations Included**     | ![Equations Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/equations.png) |
+| **References Slide**    | ![References Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/references.png) |
 
 ---
 
@@ -105,7 +107,6 @@ make cleanall
 ```
 
 ---
-
 ## 🎨 Customization
 
 ### 🔄 Update Metadata
@@ -113,34 +114,65 @@ make cleanall
 Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 
 ```latex
-\title[Short Title]{Full Presentation Title}
-\author{Your Name}
-\institute{Your Institution}
-\date[Month Year]{Event or Conference, Month Year}
+\newcommand{\paperTitle}{Full Presentation Title}
+\newcommand{\paperAuthors}{Your Name}
+\newcommand{\paperAuthorsAffiliation}{Your Institution}
+\newcommand{\paperPublishedYear}{Year}
+\newcommand{\paperConference}{Event or Conference}
+\newcommand{\presentor}{Your Name}
+\newcommand{\presentationDate}{Month Year}
+
+\title[Short Title]{\paperTitle}
+\author{\presentor}
+\institute{\paperAuthorsAffiliation}
+\date[\presentationDate]{\paperConference, \paperPublishedYear}
 ```
 
 ### 🎨 Modify Theme Settings
 
 Adjust colors, fonts, and layouts in the configuration files:
 
-- [`config/preamble.tex`](./config/preamble.tex)
-- [`config/frame-settings.tex`](./config/frame-settings.tex)
+- [`config/preamble.tex`](./config/preamble.tex): Configure packages, colors, dimensions, and hyperlink settings.
+- [`config/frame-settings.tex`](./config/frame-settings.tex): Define slide headline, title, and footer templates.
+- [`config/commands.tex`](./config/commands.tex): Create custom commands to use in your slides.
+
 
 ### 📄 Add Slides
 
-To add new slides, edit the `Main Content` section of [`main.tex`](./main.tex):
+To add new slides, you have two options:
 
-```latex
-\begin{frame}{Slide Title}
-    % Your slide content here
-\end{frame}
-```
+1. **Directly in `main.tex`**:
 
-Alternatively, create new slides in the `slides/` directory and include them in `main.tex`:
+   Create new slides directly in the `main.tex` file:
 
-```latex
-\input{slides/your-slide.tex}
-```
+   ```latex
+   \begin{frame}{Slide Title}
+       % Your slide content here
+   \end{frame}
+   ```
+
+2. **Using separate files in the `slides/` directory**:
+
+   Create new slide files in the `slides/` directory and include them in `main.tex`:
+
+   ```latex
+   \input{slides/your-slide.tex}
+   ```
+
+   For example, to add a new slide section, create a file named `your-slide.tex` in the `slides/` directory with the following content:
+
+   ```latex
+   \begin{frame}{Your Slide Title}
+       % Your slide content here
+   \end{frame}
+   ```
+
+   Then, include this file in `main.tex`:
+
+   ```latex
+   \include{slides/your-slide}
+   ```
+
 
 ### 🖼️ Add Figures
 
@@ -148,8 +180,9 @@ Place your images in the [`assets/figures`](./assets/figures) directory and refe
 
 ```latex
 \begin{figure}
-    \includegraphics[width=\linewidth]{assets/figures/your-image.png}
+    \includegraphics[width=\textwidth]{assets/figures/your-image.png}
     \caption{Your image caption}
+    \label{fig:Your Image Label}
 \end{figure}
 ```
 
@@ -160,6 +193,8 @@ Add references to [`references.bib`](references.bib) and cite them in your slide
 ```latex
 \cite{your-reference}
 ```
+
+It will be automatically added to the bibliography slide.
 
 ---
 
@@ -173,7 +208,6 @@ Add references to [`references.bib`](references.bib) and cite them in your slide
 | `assets/`                  | Directory for figures and other assets.                          |
 | `slides/`                  | Additional slides or sections.                                   |
 | `references.bib`           | Bibliography entries.                                            |
-| `titlepage.tex`            | Custom title page layout.                                        |
 | `LICENSE`                  | Project license information.                                     |
 
 ---
