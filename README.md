@@ -120,7 +120,7 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
     \setbeamertemplate{title page}{
         \begin{picture}(0,0)
             % Code for background image
-            \put(-\textmargin + 7mm, -75pt){%
+            \put(-\textmargin + 7mm, -75pt){
                 \begin{minipage}[b][4.5cm][t]{0.8\textwidth}
                     \raggedright
                     \color{white}
