@@ -23,7 +23,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y poppler-utils
         python -m pip install --upgrade pip
-        pip install PyPDF2 pillow pdf2image
+        pip install pdf2image
 
     - name: Check for main.pdf
       run: |
@@ -36,8 +36,6 @@ jobs:
       run: |
         python - <<EOF
         import os
-        from PyPDF2 import PdfReader
-        from PIL import Image
         from pdf2image import convert_from_path
 
         def extract_page_as_image():
@@ -50,10 +48,6 @@ jobs:
             # Create the output folder if it does not exist
             if not os.path.isdir(output_folder):
                 os.makedirs(output_folder, exist_ok=True)
-
-            # Read the PDF to determine the number of pages
-            reader = PdfReader(pdf_path)
-            num_pages = len(reader.pages)
 
             if num_pages == 0:
                 raise ValueError("The PDF has no pages.")
