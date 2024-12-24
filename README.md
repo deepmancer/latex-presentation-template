@@ -116,14 +116,100 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 \date[\presentationDate]{\paperConference, \paperPublishedYear}
 ```
 
+### 🏷️ Customize Title Page
+
+- Change the Background Image
+
+  You can modify the title page design in [`titlepage.tex`](./slides/titlepage.tex). For example, change the background image within:
+
+    ```latex
+    \setbeamertemplate{title page}{
+        \begin{picture}(0,0)
+            \put(-\textmargin, \dimexpr -\paperheight*6/10 \relax){
+                \includegraphics[width=\paperwidth]{assets/presentation-theme/title-slide-background.png}
+            }
+            % Adjust positioning and size of the title text or add custom elements here
+        \end{picture}
+    }
+    ```
+
+- Modify Title Page Content
+  For modifying the title page content, update the following lines in [`titlepage.tex`](./slides/titlepage.tex):
+
+    ```latex
+    \setbeamertemplate{title page}{
+        \begin{picture}(0,0)
+            % Code for background image
+            \put(-\textmargin + 7mm, -75pt){%
+                \begin{minipage}[b][4.5cm][t]{0.8\textwidth}
+                    \raggedright
+                    \color{white}
+                    \usebeamerfont{title}{\paperTitle}\\[0.4cm]
+                    \usebeamerfont{subtitle}{\paperAuthors}\\[0.2cm]
+                    \usebeamerfont{institute}{\paperConference, \paperPublishedYear}\\[2.5cm]
+                    \usebeamerfont{subtitle}{\sc\presentor}\\[0.2cm]
+                    \usebeamerfont{date}\small{\presentationDate}
+                \end{minipage}
+            }
+        \end{picture}
+    }
+    ```
+
 ### 🎨 Modify Theme Settings
 
 Adjust colors, fonts, and layouts in the configuration files:
 
-- [`config/preamble.tex`](./config/preamble.tex): Configure packages, colors, dimensions, and hyperlink settings.
-- [`config/frame-settings.tex`](./config/frame-settings.tex): Define slide headline, title, and footer templates.
-- [`config/commands.tex`](./config/commands.tex): Create custom commands to use in your slides.
+- [`config/preamble.tex`](./config/preamble.tex): Configure packages, colors, figures, tables, and hyperlink settings.
+  - **Bibliography Management**:
 
+    ```latex
+    \usepackage[
+        backend=biber,
+        style=ieee,                    % Citation style (e.g., ieee, apa, mla)
+    ]{biblatex}
+    \addbibresource{references.bib}    % Bibliography file
+    ```
+
+  - **Color and Theme Customization**:
+
+    ```latex
+    \definecolor{myBlue}{RGB}{0,33,71}
+    ```
+
+- [`config/frame-settings.tex`](./config/frame-settings.tex): Define slide headline, title, and footer templates.
+  - **Slide Title Template**:
+
+    ```latex
+    \setbeamertemplate{frametitle}{
+        % Code for slide title
+    }
+    ```
+
+  - **Slide Footer Template**:
+
+    ```latex
+    \setbeamertemplate{footline}{
+        % Code for slide footer
+            \hfill
+            {\usebeamercolor[fg]{presentor in head/foot}\usebeamerfont{presentor in head/foot}\presentor}
+            \hfill
+            {\usebeamercolor[fg]{date in head/foot}\usebeamerfont{date in head/foot}\presentationDate}
+            \hfill
+            {\usebeamercolor[fg]{page number in head/foot}\usebeamerfont{page number in head/foot}\usebeamertemplate{page number in head/foot}}
+            \hfill
+        % Code for slide footer
+    }
+    ```
+
+- [`config/commands.tex`](./config/commands.tex): Create custom commands to use in your slides.
+  - **New Section Command**:
+
+    ```latex
+    \newcommand{\newSection}[1]{
+        % Code for adding a new page when a new section starts
+        \section{#1}
+    }
+    ```
 
 ### 📄 Add Slides
 
@@ -161,7 +247,6 @@ To add new slides, you have two options:
    \include{slides/your-slide}
    ```
 
-
 ### 🖼️ Add Figures
 
 Place your images in the [`assets/figures`](./assets/figures) directory and reference them in your slides:
@@ -176,7 +261,7 @@ Place your images in the [`assets/figures`](./assets/figures) directory and refe
 
 ### 📚 Manage References
 
-Add references to [`references.bib`](references.bib) and cite them in your slides using:
+Add references to [`references.bib`](./references.bib) and cite them in your slides using:
 
 ```latex
 \cite{your-reference}
