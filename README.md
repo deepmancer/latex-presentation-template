@@ -113,7 +113,6 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
     }
     ```
 
-
 - **Title Page Content**  
   Update the content in [`titlepage.tex`](./slides/titlepage.tex):
 
