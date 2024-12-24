@@ -15,7 +15,7 @@ Welcome to the **LaTeX Presentation Template**! This repository provides a moder
 
 ## 📌 Quick Links
 
-| [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Live Preview](https://deepmancer.github.io/latex-presentation-template/) |
+| [Source Code](https://github.com/deepmancer/latex-presentation-template) | [Live Preview](https://deepmancer.github.io/latex-presentation-template/) | [Overleaf](https://www.overleaf.com/7371632237xhksjncgphnf#32b38d) |
 
 ---
 
@@ -45,54 +45,34 @@ Below are a few slide previews to showcase the template’s design:
 
 ## 🚀 Getting Started
 
-### ✅ Prerequisites
+### 🖥️ Local Setup
 
-Ensure you have the following installed on your system:
+1. **Clone the Repository**:
 
-- A [LaTeX distribution](https://www.latex-project.org/get/) (e.g., TeX Live, MiKTeX, MacTeX)
-- [BibTeX](http://www.bibtex.org/)
-- A text editor or IDE (e.g., [Visual Studio Code](https://code.visualstudio.com/))
+   ```bash
+   git clone https://github.com/deepmancer/latex-presentation-template.git
+   cd latex-presentation-template
+   ```
 
-### 📥 Installation
+2. **Install Required Tools**:
+   - Install a [LaTeX distribution](https://www.latex-project.org/get/) (e.g., TeX Live, MiKTeX, MacTeX).
 
-Clone the repository and navigate to the project directory:
+3. **Compile Your Presentation**:
 
-```bash
-# Clone the repository
-git clone https://github.com/deepmancer/latex-presentation-template.git
+     ```bash
+     make # Generates the PDF
+     ```
 
-# Navigate to the directory
-cd latex-presentation-template
-```
+### 🌿 Overleaf Setup
 
----
+1. **Download the ZIP**:
+   - Download the repository as a ZIP file.
 
-## 📖 Usage
+2. **Upload to Overleaf**:
+   - Upload the ZIP file to your project on [Overleaf](https://www.overleaf.com/project).
 
-### 🖨️ Compiling Your Presentation
-
-Use the included [`Makefile`](Makefile) for compiling your presentation:
-
-```bash
-# Compile the presentation
-make
-```
-
-The compiled PDF will be saved as `main.pdf`.
-
-### 🧹 Cleanup
-
-Clean up auxiliary files:
-
-```bash
-make clean
-```
-
-Remove all generated files, including the PDF:
-
-```bash
-make cleanall
-```
+3. **Edit and Compile**:
+   - Update the template with your details. Overleaf compiles the document automatically!
 
 ---
 
@@ -269,13 +249,12 @@ They will appear in your bibliography slide automatically.
 
 | **File/Directory** | **Purpose**                                                     |
 |--------------------|-----------------------------------------------------------------|
-| `main.tex`         | Main file for the presentation                                 |
-| `Makefile`         | Automates build and cleanup tasks                              |
-| `config/`          | Theme and settings configuration files                         |
-| `assets/`          | Folder for images and other media assets                       |
-| `slides/`          | Optional directory for separate slide sections                 |
-| `references.bib`   | Bibliography entries                                           |
-| `LICENSE`          | Project license information                                    |
+| `main.tex`         | Main file for the presentation                                  |
+| `references.bib`   | Bibliography entries                                            |
+| `config/`          | Theme and settings configuration files                          |
+| `assets/`          | Folder for images and other media assets                        |
+| `slides/`          | Optional directory for separate slide sections                  |
+| `Makefile`         | Automates build and cleanup tasks                               |
 
 ---
 
