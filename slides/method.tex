@@ -1,0 +1,64 @@
+\newSection{Proposed Method}
+
+%---------------------------------------------------------
+\subsection{HairStep Representation}
+%---------------------------------------------------------
+\begin{frame}[t]{HairStep Representation}
+    \emph{HairStep} is defined as $\mathbf{H} = \{\mathbf{O}, \mathbf{D}\}$ for each input image $\mathbf{I} \in \mathbb{R}^{W \times H \times 3}$, where:
+    \begin{itemize}
+        \item $\mathbf{O} \in \mathbb{R}^{W \times H \times 3}$ is the \textbf{Strand Map}.
+        \item $\mathbf{D} \in \mathbb{R}^{W \times H \times 1}$ is the \textbf{Depth Map}.
+    \end{itemize}
+
+    \vspace{2pt}
+
+    The \textbf{Strand Map} $\mathbf{O} \in \mathbb{R}^{W \times H \times 3}$ is defined at each pixel $x$ as:
+    \begin{equation}
+        \mathbf{O}(x) = \bigl(\mathbf{M}(x),\; \tfrac{\mathbf{O}_{\mathrm{2D}}(x)}{2} + 0.5\bigr),
+        \label{eq:strand_map}
+    \end{equation}
+    \vspace{-0.5cm}
+    \begin{itemize}
+        \item $\mathbf{M}(x) \in \{0, 1\}$ is the hair mask indicating hair regions ($1$) and background ($0$).
+        \item $\mathbf{O}_{\mathrm{2D}}(x) \in \mathbb{R}^2$ is the unit vector of 2D hair-growth orientation at pixel $x$.
+    \end{itemize}
+
+    \vspace{2pt}
+
+    The \textbf{Depth Map} $\mathbf{D} \in \mathbb{R}^{W \times H \times 1}$ defines relative depth differences among hair strands.
+
+    \vspace{5pt}
+    \begin{itemize}
+        \item Each pixel $\mathbf{D}(x) \in [0, 1]$:
+        \begin{itemize}
+            \item $\mathbf{D}(x) = 0$: Farthest from the camera (background or distant strands).
+            \item $\mathbf{D}(x) = 1$: Closest to the camera.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------
+\subsection{Method Overview}
+%---------------------------------------------------------
+\begin{frame}[t]{Method Overview}
+    The pipeline consists of three main components:
+    \begin{enumerate}
+        \item \textbf{Strand Map Extraction and Prediction}
+        \begin{itemize}
+            \item Extract strand maps from real images using the \emph{HiSa} dataset.
+            \item Train a network to predict strand maps from input images.
+        \end{itemize}
+
+        \item \textbf{Domain-Adaptive Depth Estimation}
+        \begin{itemize}
+            \item Estimate relative depth from real images using the \emph{HiDa} dataset.
+            \item Employ domain adaptation techniques to refine depth estimation.
+        \end{itemize}
+
+        \item \textbf{3D Hair Reconstruction}
+        \begin{itemize}
+            \item Reconstruct 3D hair strands from the predicted strand and depth maps.
+            \item Utilize implicit fields for volumetric hair representation.
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
