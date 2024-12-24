@@ -82,7 +82,7 @@ Below are a few slide previews to showcase the template’s design:
 
 Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 
-```latex
+```tex
 \newcommand{\paperTitle}{Full Presentation Title}
 \newcommand{\paperAuthors}{Your Name}
 \newcommand{\paperAuthorsAffiliation}{Your Institution}
@@ -102,7 +102,7 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 - **Background Image**  
   In [`titlepage.tex`](./slides/titlepage.tex), you can modify the background image:
 
-    ```latex
+    ```tex
     \setbeamertemplate{title page}{
         \begin{picture}(0,0)
             \put(-\textmargin, \dimexpr -\paperheight*6/10 \relax){
@@ -116,7 +116,7 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 - **Title Page Content**  
   Update the content in [`titlepage.tex`](./slides/titlepage.tex):
 
-    ```latex
+    ```tex
     \setbeamertemplate{title page}{
         \begin{picture}(0,0)
             % Code for background image
@@ -140,7 +140,7 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 - **General Configuration**  
   Within [`config/preamble.tex`](./config/preamble.tex), you’ll find settings for packages, colors, figures, tables, and hyperlinks.
 
-    ```latex
+    ```tex
     \usepackage[
         backend=biber,
         style=ieee,                    % Citation style (e.g., ieee, apa, mla)
@@ -148,20 +148,20 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
     \addbibresource{references.bib}    % Bibliography file
     ```
 
-    ```latex
+    ```tex
     \definecolor{myBlue}{RGB}{0,33,71}
     ```
 
 - **Slide Templates**  
   Inside [`config/frame-settings.tex`](./config/frame-settings.tex), you can define how each slide’s title and footer appear:
 
-    ```latex
+    ```tex
     \setbeamertemplate{frametitle}{
         % Code for slide title
     }
     ```
 
-    ```latex
+    ```tex
     \setbeamertemplate{footline}{
         % Code for slide footer
             \hfill
@@ -178,7 +178,7 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 - **Custom Commands**  
   [`config/commands.tex`](./config/commands.tex) holds additional commands you can utilize:
 
-    ```latex
+    ```tex
     \newcommand{\newSection}[1]{
         % Code for adding a new page when a new section starts
         \section{#1}
@@ -193,7 +193,7 @@ To add new slides, you have two options:
 
    Create new slides directly in the `main.tex` file:
 
-   ```latex
+   ```tex
    \begin{frame}{Slide Title}
        % Your slide content here
    \end{frame}
@@ -203,13 +203,13 @@ To add new slides, you have two options:
 
    Create new slide files in the `slides/` directory and include them in `main.tex`:
 
-   ```latex
+   ```tex
    \input{slides/your-slide.tex}
    ```
 
    For example, to add a new slide section, create a file named `your-slide.tex` in the `slides/` directory with the following content:
 
-   ```latex
+   ```tex
    \begin{frame}{Your Slide Title}
        % Your slide content here
    \end{frame}
@@ -217,7 +217,7 @@ To add new slides, you have two options:
 
    Then, include this file in `main.tex`:
 
-   ```latex
+   ```tex
    \include{slides/your-slide}
    ```
 
@@ -225,7 +225,7 @@ To add new slides, you have two options:
 
 Place your images in the [`assets/figures`](./assets/figures) directory and reference them in your slides:
 
-```latex
+```tex
 \begin{figure}
     \includegraphics[width=\textwidth]{assets/figures/your-image.png}
     \caption{Your image caption}
@@ -237,7 +237,7 @@ Place your images in the [`assets/figures`](./assets/figures) directory and refe
 
 Add references to [`references.bib`](./references.bib) and cite them in your slides:
 
-```latex
+```tex
 \cite{your-reference}
 ```
 
