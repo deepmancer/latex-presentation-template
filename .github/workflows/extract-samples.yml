@@ -49,6 +49,9 @@ jobs:
             if not os.path.isdir(output_folder):
                 os.makedirs(output_folder, exist_ok=True)
 
+            # Get the total number of pages in the PDF
+            num_pages = len(convert_from_path(pdf_path))
+
             if num_pages == 0:
                 raise ValueError("The PDF has no pages.")
 
