@@ -7,9 +7,9 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
 </div>
 
-<p align="center"><em>Create beautiful, mathematically-rich presentations with ease using LaTeX!</em></p>
+<p align="center"><em>Create beautiful, mathematically rich presentations easily with LaTeX and Beamer!</em></p>
 
-Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a professional, user-friendly template for creating stunning presentations with LaTeX and Beamer. Whether you're an academic, researcher, or professional, this template is tailored to help you create visually appealing and technically rich presentations effortlessly.
+Welcome to the **LaTeX Presentation Template**! This repository provides a modern, user-friendly setup for creating professional presentations. Whether you're an academic, researcher, or professional, this template equips you with a streamlined workflow for visually appealing and technically robust slides.
 
 ---
 
@@ -19,17 +19,17 @@ Welcome to the **LaTeX Presentation Template**! 🎉 This repository provides a 
 
 ---
 
-## 🖼️ Snapshots
+## 🖼️ Sample Slides
 
-Preview some slides created with this template:
+Below are a few slide previews to showcase the template’s design:
 
-| **Slide Section**       | **Preview**                                                              |
-|-------------------------|--------------------------------------------------------------------------|
-| **Title Page**          | ![Title Page](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/titlepage.png) |
-| **Table of Contents**   | ![Table of Contents](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/table_of_contents.png) |
-| **Image Displayed**         | ![Image Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/image_slide.png) |
-| **Equations Included**     | ![Equations Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/equations.png) |
-| **References Slide**    | ![References Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/references.png) |
+| **Slide Section**         | **Preview**                                                                               |
+|---------------------------|-------------------------------------------------------------------------------------------|
+| **Title Page**            | ![Title Page](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/titlepage.png) |
+| **Table of Contents**     | ![Table of Contents](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/table_of_contents.png) |
+| **Image Example**         | ![Image Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/image_slide.png) |
+| **Equations Example**             | ![Equations Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/equations.png) |
+| **References**            | ![References Slide](https://raw.githubusercontent.com/deepmancer/latex-presentation-template/main/assets/samples/references.png) |
 
 ---
 
@@ -95,6 +95,7 @@ make cleanall
 ```
 
 ---
+
 ## 🎨 Customization
 
 ### 🔄 Update Metadata
@@ -116,11 +117,10 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 \date[\presentationDate]{\paperConference, \paperPublishedYear}
 ```
 
-### 🏷️ Customize Title Page
+### 🏷️ Customize the Title Page
 
-- Change the Background Image
-
-  You can modify the title page design in [`titlepage.tex`](./slides/titlepage.tex). For example, change the background image within:
+- **Background Image**  
+  In [`titlepage.tex`](./slides/titlepage.tex), you can modify the background image:
 
     ```latex
     \setbeamertemplate{title page}{
@@ -133,8 +133,8 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
     }
     ```
 
-- Modify Title Page Content
-  For modifying the title page content, update the following lines in [`titlepage.tex`](./slides/titlepage.tex):
+- **Title Page Content**  
+  Update the content in [`titlepage.tex`](./slides/titlepage.tex):
 
     ```latex
     \setbeamertemplate{title page}{
@@ -157,10 +157,8 @@ Edit [`main.tex`](main.tex) to update the presentation’s metadata:
 
 ### 🎨 Modify Theme Settings
 
-Adjust colors, fonts, and layouts in the configuration files:
-
-- [`config/preamble.tex`](./config/preamble.tex): Configure packages, colors, figures, tables, and hyperlink settings.
-  - **Bibliography Management**:
+- **General Configuration**  
+  Within [`config/preamble.tex`](./config/preamble.tex), you’ll find settings for packages, colors, figures, tables, and hyperlinks.
 
     ```latex
     \usepackage[
@@ -170,22 +168,18 @@ Adjust colors, fonts, and layouts in the configuration files:
     \addbibresource{references.bib}    % Bibliography file
     ```
 
-  - **Color and Theme Customization**:
-
     ```latex
     \definecolor{myBlue}{RGB}{0,33,71}
     ```
 
-- [`config/frame-settings.tex`](./config/frame-settings.tex): Define slide headline, title, and footer templates.
-  - **Slide Title Template**:
+- **Slide Templates**  
+  Inside [`config/frame-settings.tex`](./config/frame-settings.tex), you can define how each slide’s title and footer appear:
 
     ```latex
     \setbeamertemplate{frametitle}{
         % Code for slide title
     }
     ```
-
-  - **Slide Footer Template**:
 
     ```latex
     \setbeamertemplate{footline}{
@@ -201,8 +195,8 @@ Adjust colors, fonts, and layouts in the configuration files:
     }
     ```
 
-- [`config/commands.tex`](./config/commands.tex): Create custom commands to use in your slides.
-  - **New Section Command**:
+- **Custom Commands**  
+  [`config/commands.tex`](./config/commands.tex) holds additional commands you can utilize:
 
     ```latex
     \newcommand{\newSection}[1]{
@@ -261,44 +255,42 @@ Place your images in the [`assets/figures`](./assets/figures) directory and refe
 
 ### 📚 Manage References
 
-Add references to [`references.bib`](./references.bib) and cite them in your slides using:
+Add references to [`references.bib`](./references.bib) and cite them in your slides:
 
 ```latex
 \cite{your-reference}
 ```
 
-It will be automatically added to the bibliography slide.
+They will appear in your bibliography slide automatically.
 
 ---
 
 ## 📁 Project Structure
 
-| **File/Directory**         | **Purpose**                                                        |
-|----------------------------|--------------------------------------------------------------------|
-| `main.tex`                 | Main LaTeX file for the presentation.                             |
-| `Makefile`                 | Automates build and cleanup tasks.                               |
-| `config/`                  | Configuration files for themes and settings.                     |
-| `assets/`                  | Directory for figures and other assets.                          |
-| `slides/`                  | Additional slides or sections.                                   |
-| `references.bib`           | Bibliography entries.                                            |
-| `LICENSE`                  | Project license information.                                     |
+| **File/Directory** | **Purpose**                                                     |
+|--------------------|-----------------------------------------------------------------|
+| `main.tex`         | Main file for the presentation                                 |
+| `Makefile`         | Automates build and cleanup tasks                              |
+| `config/`          | Theme and settings configuration files                         |
+| `assets/`          | Folder for images and other media assets                       |
+| `slides/`          | Optional directory for separate slide sections                 |
+| `references.bib`   | Bibliography entries                                           |
+| `LICENSE`          | Project license information                                    |
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE). You’re free to use, modify, and distribute the template as per the license terms.
+This project is available under the [MIT License](LICENSE). Feel free to use, modify, and distribute under these terms.
 
 ---
 
 ## ⭐ Support the Project
 
-If you find this template useful, consider:
+Consider the following if you find this template helpful:
 
-- Starring this repository on GitHub ⭐
-- Forking the project to make your own version 🍴
-- Sharing it with your peers and colleagues 📢
-
----
+- Star this repository on GitHub ⭐  
+- Fork the project to create your own variant 🍴  
+- Share it with peers and colleagues 📢  
 
 Happy TeXing! 🎉
