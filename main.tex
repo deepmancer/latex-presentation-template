@@ -1,40 +1,29 @@
 \documentclass[smaller, aspectratio=169]{beamer}
-% Load modular components
 
-
-
-\useoutertheme{infolines} 
-
-\usepackage[
-    backend=biber,
-    style=ieee,
-]{biblatex}
-\addbibresource{references.bib}
-
-
+% Packages
 \input{config/preamble}
 \input{config/frame-settings}
-\input{titlepage}
+\input{config/commands.tex}
+
+% Title Page
+\input{slides/titlepage}
 
 % Metadata
-\newcommand{\paperTitle}{Supervised Learning for Image Classification}
-\newcommand{\paperAuthors}{John Doe, Jane Doe}
-\newcommand{\paperAuthorsAffiliation}{University of Doe}
+\newcommand{\paperTitle}{HairStep: Transfer Synthetic to Real Using Strand and Depth Maps for Single-View 3D Hair Modeling}
+\newcommand{\paperAuthors}{Y. Zheng, Z. Jin, M. Li, H. Huang, C. Ma, S. Cui, and X. Han}
+\newcommand{\paperAuthorsAffiliation}{CUHKSZ, Kuaishou Technology}
 \newcommand{\paperPublishedYear}{2023}
-\newcommand{\paperConference}{International Conference on Machine Learning}
-\newcommand{\paperConferenceAbbreviation}{ICML}
-
+\newcommand{\paperConference}{Computer Vision and Pattern Recognition}
+\newcommand{\paperConferenceAbbreviation}{CVPR}
 
 \newcommand{\presentor}{Alireza Heidari}
 \newcommand{\presentationDate}{December 2024}
-
 
 \title[Paper Presentation]{\paperTitle}
 \author{Alireza Heidari}
 \institute{Simon Fraser University}
 \date[December 2024]{\paperConference, \paperPublishedYear}
 
-% Document
 \begin{document}
 
 % Title Page
@@ -42,58 +31,28 @@
     \titlepage
 \end{frame}
 
+% Table of Contents
+\begin{frame}[t]{Outline}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
 % Main Content
 % -------------------------------
 % Slide Content
 % -------------------------------
-\begin{frame}
-  \frametitle{This is the first slide}
-  \framesubtitle{A bit more information about this}
-  
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  
-  Here is:
-  \begin{enumerate}
-      \item Some text;
-      \item Inline maths: $\mathcal{R}_C(D)=\oplus_{n\geqslant0}\mathcal{L}(nD)$;
-      \item Display maths:
-      \[
-          \operatorname{Tor}_i(\operatorname{colim}_\alpha M_\alpha, N) = \operatorname{colim}_\alpha\operatorname{Tor}_i(M_\alpha, N)
-      \]
-  \end{enumerate}
-\end{frame}
-
-
-\begin{frame}{Make Titles Informative}
-  \begin{itemize}
-      \item Use \texttt{itemize} a lot.
-      \item Use very short sentences or short phrases.
-  \end{itemize}
-  You can create overlays:
-  \begin{itemize}
-      \item Using the \texttt{pause} command:
-      \begin{itemize}
-          \item First item.
-          \pause
-          \item Second item.
-      \end{itemize}
-      \item Using overlay specifications:
-      \begin{itemize}
-          \item<3-> First item.
-          \item<4-> Second item.
-      \end{itemize}
-      \item Using the general \texttt{uncover} command:
-      \begin{itemize}
-          \uncover<5->{\item First item.}
-          \uncover<6->{\item Second item.}
-      \end{itemize}
-  \end{itemize}
-\end{frame}
+\include{slides/task-intro}
+\include{slides/related-works}
+\include{slides/motivation}
+\include{slides/contribution}
+\include{slides/method}
+\include{slides/conclusion}
 
 
 % References
-\begin{frame}[t]{References}
+\begin{frame}[allowframebreaks, t]{References}
     \nocite{*}
+    \small
     \printbibliography
 \end{frame}
 
