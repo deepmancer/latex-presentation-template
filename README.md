@@ -33,25 +33,13 @@ Preview some slides created with this template:
 
 ---
 
-## ✨ Why Choose This Template?
+## ✨ Why This Template?
 
 - **🎨 Sleek and Modern Design**: Impress your audience with clean, professional visuals.
 - **⚡ Time-Saving Setup**: Pre-configured settings and ready-to-use slides.
 - **🔢 Math-Ready**: Seamless support for equations, symbols, and scientific notations.
 - **📚 Integrated Bibliography**: Easily manage references with BibTeX.
 - **🛠️ Fully Customizable**: Tailor colors, fonts, layouts, and more to match your style.
-
----
-
-## 🌟 Key Features
-
-| **Feature**                  | **Description**                                                                 |
-|--------------------------|-----------------------------------------------------------------------------|
-| *Modern Design*        | Sleek, minimalist visuals for professional presentations.                  |
-| *Easy Customization*   | Modify themes, layouts, and metadata effortlessly.                        |
-| *Pre-Built Makefile*   | Simplifies compiling, cleaning, and file management.                      |
-| *Math Support*         | Embed equations and symbols with LaTeX's powerful math tools.             |
-| *Bibliography Integration* | Manage references with BibTeX for a polished, academic presentation.    |
 
 ---
 
