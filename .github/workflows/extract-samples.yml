@@ -70,11 +70,23 @@ jobs:
             references_image_path = os.path.join(output_folder, "references.png")
             references_image.save(references_image_path, "PNG")
 
-            # Convert the second page
-            content_images = convert_from_path(pdf_path, first_page=2, last_page=2)
-            content_image = content_images[0]
-            content_image_path = os.path.join(output_folder, "content.png")
-            content_image.save(content_image_path, "PNG")
+            # Convert the second page (Table of Contents)
+            toc_images = convert_from_path(pdf_path, first_page=2, last_page=2)
+            toc_image = toc_images[0]
+            toc_image_path = os.path.join(output_folder, "table_of_contents.png")
+            toc_image.save(toc_image_path, "PNG")
+
+            # Convert the eighth page (Figure Included)
+            image_slide_images = convert_from_path(pdf_path, first_page=8, last_page=8)
+            image_slide_image = image_slide_images[0]
+            image_slide_image_path = os.path.join(output_folder, "image_slide.png")
+            image_slide_image.save(image_slide_image_path, "PNG")
+
+            # Convert the 15th page (Equations)
+            equations_images = convert_from_path(pdf_path, first_page=15, last_page=15)
+            equations_image = equations_images[0]
+            equations_image_path = os.path.join(output_folder, "equations.png")
+            equations_image.save(equations_image_path, "PNG")
 
         extract_page_as_image()
         EOF
