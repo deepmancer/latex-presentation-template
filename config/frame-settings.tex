@@ -1,7 +1,11 @@
+% Slide Headline
+\setbeamertemplate{headline}{}
+
 % -------------------------------
-% Slide Header
+% Slide Settings
 % -------------------------------
 \setbeamertemplate{frametitle}{
+    \vspace{1.ex}
     \rlap{%
         \begin{beamercolorbox}[sep=\titlevmargin, left, wd=\dimexpr\fullpagewidth - \titlehmargin * 2 + \titlevmargin * 2\relax]{frametitle}
             \begin{minipage}{\dimexpr\fullpagewidth - \titlehmargin * 3 - 0.1cm\relax}
@@ -9,7 +13,7 @@
             \end{minipage}
         \end{beamercolorbox}
     }
-    \vspace{\dimexpr-\baselineskip + 1ex\relax}
+    \vspace{\dimexpr-\baselineskip + 1.6ex\relax}
     \noindent\rlap{\hspace{-\textmargin}\hspace{\titlehmargin}\rule{\dimexpr\fullpagewidth - \titlehmargin * 2\relax}{0.4pt}}
     \vspace{-0.6ex}
 }
