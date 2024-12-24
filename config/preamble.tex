@@ -1,18 +1,47 @@
+
+% -------------------------------
+% Outer Theme Configuration
+\useoutertheme{infolines} 
+
 % -------------------------------
 % Package Imports
 % -------------------------------
-\usepackage{graphicx}    % For including graphics
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{amsmath}     % For math symbols and environments
-\usepackage{amssymb}     % For additional math symbols
-\usepackage{amsfonts}    % For math fonts
-\usepackage{amsthm}      % For theorem environments
+\usepackage[utf8]{inputenc}        % UTF-8 encoding
+\usepackage[english]{babel}        % English language support
+\usepackage{amsmath}               % For math symbols and environments
+\usepackage{amssymb}               % For additional math symbols
+\usepackage{amsfonts}              % For math fonts
+\usepackage{amsthm}                % For theorem environments
+\usepackage{graphicx}              % For including graphics
+\usepackage{xcolor}                % Colored elements and tables
+\usepackage{tikz}                  % For creating graphics programmatically
+\usepackage{eso-pic}               % Background images
+\usepackage{float}                 % Precise float positioning
+\usepackage{epstopdf}              % EPS to PDF conversion
+\usepackage{array}                 % Column width definition
+\usepackage{booktabs}              % Professional horizontal lines
+\usepackage{caption}               % Caption customization
+\usepackage{colortbl}              % Colored tables
+\usepackage{longtable}             % Tables that can span multiple pages
+\usepackage{makecell}              % Customized cell formatting
+\usepackage{tabularx}              % Flexible-width tables
+\usepackage{bookmark}              % PDF bookmarks
+\usepackage{hyperref}              % For hyperlinks
+\usepackage{cleveref}              % Clever referencing for improved cross-references
+
+\usepackage[
+    backend=biber,
+    style=ieee,
+]{biblatex}                        % Bibliography management
+\addbibresource{references.bib}    % Bibliography file
 
 % -------------------------------
 % Color and Theme Customization
 % -------------------------------
 \definecolor{myBlue}{RGB}{0,33,71}
+\definecolor{myLightBlue}{cmyk}{0.05,0.01,0,0.02}
+\definecolor{myDarkBlue}{RGB}{0, 0, 102}
+
 \usecolortheme[named=myBlue]{structure}
 
 % Remove navigation symbols
@@ -33,3 +62,30 @@
 
 \newlength{\fullpagewidth}
 \setlength{\fullpagewidth}{\dimexpr\textwidth + 2\textmargin\relax}
+
+% -------------------------------
+% Hyperlink Settings
+% -------------------------------
+\hypersetup{
+    bookmarks=true,
+    colorlinks=true, 
+    linkcolor=myBlue, 
+    citecolor=myBlue, 
+    filecolor=myBlue, 
+    urlcolor=myBlue,  
+    pdfborder={0 0 0}
+}
+
+% ---- Caption Colors ----
+% ---- Caption Font Size ----
+\captionsetup[figure]{
+    labelformat=empty,    % Remove "Figure" label
+    font={footnotesize},         % Set font size to 10pt (small)
+    skip=5pt              % Add spacing between caption and figure
+}
+
+\captionsetup[table]{
+    labelformat=empty,    % Remove "Table" label
+    font={footnotesize},         % Set font size to 10pt (small)
+    skip=5pt              % Add spacing between caption and table
+}
