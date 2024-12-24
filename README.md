@@ -293,4 +293,6 @@ Consider the following if you find this template helpful:
 - Fork the project to create your own variant 🍴  
 - Share it with peers and colleagues 📢  
 
+---
+
 Happy TeXing! 🎉
